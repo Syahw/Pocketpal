@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogbox"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Wallets_Page">
+
+        <EditText
+            android:id="@+id/etChooseCategory"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="50dp"
+            android:drawableStart="@drawable/img_arrow_left"
+            android:drawableTint="@color/gray"
+            android:fontFamily="@font/poppins"
+            android:hint="Choose Budget Category"
+            android:inputType="text"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etWalletName" />
+
+        <EditText
+            android:id="@+id/etWalletBalance"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/poppins"
+            android:hint="Enter Budget Balance"
+            android:inputType="number|numberDecimal"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etChooseCategory" />
+
+        <ImageView
+            android:id="@+id/imgBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_line" />
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_close" />
+
+        <TextView
+            android:id="@+id/tvEditWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/poppins"
+            android:text="Create a new Budget"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etWalletName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/poppins"
+            android:hint="Enter Budget Name "
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvEditWallet" />
+
+        <Button
+            android:id="@+id/btnCreateWallet"
+            android:layout_width="341dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="300dp"
+            android:backgroundTint="@color/Greencolor"
+            android:fontFamily="@font/poppins"
+            android:text="Create Budget"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etWalletBalance" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="34dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/etWalletName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_wallet" />
+
+        <ImageView
+            android:id="@+id/imgBalance"
+            android:layout_width="38dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/etWalletBalance"
+            app:layout_constraintTop_toBottomOf="@+id/btnCategory"
+            app:srcCompat="@drawable/img_balance" />
+
+        <Button
+            android:id="@+id/btnCategory"
+            android:layout_width="32dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/gray"
+            android:text="Button"
+            app:iconSize="25dp"
+            app:layout_constraintEnd_toStartOf="@+id/etChooseCategory"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

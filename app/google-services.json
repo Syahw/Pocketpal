@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1008903782045",
+    "firebase_url": "https://pocketpal-9047d-default-rtdb.firebaseio.com",
+    "project_id": "pocketpal-9047d",
+    "storage_bucket": "pocketpal-9047d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008903782045:android:be2c8ead739e3742a59e74",
+        "android_client_info": {
+          "package_name": "com.example.pocketpal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008903782045-vt1ndcsd7mtqjjdfh5qd8d8cvrtgh66n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEDQbcPt6fW3Xua1BfnUf73jOk7tf020c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008903782045-8o2fjktr0alovasgii683aranrosiops.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

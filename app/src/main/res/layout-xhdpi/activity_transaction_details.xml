@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransactionDetails">
+
+    <ImageView
+        android:id="@+id/imgBgTransaction"
+        android:layout_width="match_parent"
+        android:layout_height="406dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgTransaction"
+        app:srcCompat="@drawable/custom_bg_light_grey" />
+
+    <TextView
+        android:id="@+id/tvTransactionNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/poppins"
+        android:text="Transaction Notes"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTransactionDate" />
+
+    <EditText
+        android:id="@+id/etTransactionDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTransactionDate" />
+
+    <TextView
+        android:id="@+id/tvTransactionCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:textColor="@color/Greencolor"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/bgTitleGreen"
+        app:layout_constraintTop_toBottomOf="@+id/tvHint" />
+
+    <EditText
+        android:id="@+id/etTransactionPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:inputType="number|numberDecimal"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTransactionPrice" />
+
+    <ImageView
+        android:id="@+id/bgTitleGreen"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="-5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/custom_bg_transaction_lightblue" />
+
+    <ImageView
+        android:id="@+id/imgTransaction"
+        android:layout_width="167dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="84dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_camera" />
+
+    <TextView
+        android:id="@+id/tvTransactionDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_extrabold"
+        android:gravity="center"
+        android:text="Transaction Details"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/bgTitleGreen"
+        app:layout_constraintTop_toTopOf="@+id/bgTitleGreen" />
+
+    <EditText
+        android:id="@+id/etTransactionNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTransactionNotes" />
+
+    <ImageView
+        android:id="@+id/imgCloseDetails"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_arrow_left" />
+
+    <TextView
+        android:id="@+id/tvTransactionPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins"
+        android:text="Transaction Price (MYR)"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTransactionCategory" />
+
+    <TextView
+        android:id="@+id/tvTransactionDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:fontFamily="@font/poppins"
+        android:text="Transaction Date"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTransactionPrice" />
+
+    <ImageView
+        android:id="@+id/imgDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvTransactionDate"
+        app:layout_constraintTop_toBottomOf="@+id/imgBalance2"
+        app:srcCompat="@drawable/img_date" />
+
+    <ImageView
+        android:id="@+id/imgNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvTransactionNotes"
+        app:layout_constraintTop_toBottomOf="@+id/imgDate"
+        app:srcCompat="@drawable/img_note" />
+
+    <ImageView
+        android:id="@+id/imgBalance2"
+        android:layout_width="32dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvTransactionPrice"
+        app:layout_constraintTop_toBottomOf="@+id/tvTransactionCategory"
+        app:srcCompat="@drawable/img_balance" />
+
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="34dp"
+        android:fontFamily="@font/poppins"
+        android:text="Note : Click on the icon to select date"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/imgBgTransaction"
+        app:layout_constraintStart_toStartOf="@+id/imgBgTransaction"
+        app:layout_constraintTop_toTopOf="@+id/imgBgTransaction" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:menu_colorNormal="@color/Greencolor"
+            app:menu_fab_size="normal"
+            app:menu_icon="@drawable/img_menu"
+            app:menu_labels_colorPressed="@color/Greencolor"
+            app:menu_openDirection="up"
+            app:menu_showShadow="true">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_delete"
+                app:fab_colorNormal="@color/Redcolor"
+                app:fab_showShadow="true"
+                app:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_edit"
+                app:fab_colorNormal="@color/LightBlueColor"
+                app:fab_showShadow="true"
+                app:fab_size="mini">
+
+            </com.github.clans.fab.FloatingActionButton>
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

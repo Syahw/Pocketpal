@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PocketPal</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="web_client_id">1008903782045-vt1ndcsd7mtqjjdfh5qd8d8cvrtgh66n.apps.googleusercontent.com</string>
+</resources>

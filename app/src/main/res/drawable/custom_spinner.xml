@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <!-- Transparent background with rounded corners -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/white" />
+                    <stroke android:color="@color/gray" android:width="1dp" />
+                    <corners android:radius="8dp" /> <!-- Corner radius -->
+                </shape>
+            </item>
+
+            <!-- Drawable (img_arrow_down) with a padding of 5dp -->
+            <item android:drawable="@drawable/img_arrow_down" android:gravity="end"  />
+        </layer-list>
+    </item>
+</selector>

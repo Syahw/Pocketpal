@@ -1,0 +1,182 @@
+package com.example.pocketpal;
+
+import android.app.Dialog;
+import android.content.Context;
+import android.content.res.Resources;
+import android.util.TypedValue;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+
+import java.util.List;
+
+public class SelectWalletAdapter extends RecyclerView.Adapter<ViewHolder> {
+    private Context context;
+    private List<HelperClass> dataList;
+    private Dialog dialog; // Add a member variable for the Dialog instance
+
+    // Declare the interface
+    public interface OnWalletClickListener {
+        void onWalletClick(HelperClass wallet, Dialog dialog);
+    }
+
+    // Add a member variable to hold the listener instance
+    private OnWalletClickListener onWalletClickListener;
+
+    // Constructor to set the listener
+    public SelectWalletAdapter(Context context, List<HelperClass> dataList, Dialog dialog, OnWalletClickListener onWalletClickListener) {
+        this.context = context;
+        this.dataList = dataList;
+        this.dialog = dialog; // Initialize the Dialog instance
+        this.onWalletClickListener = onWalletClickListener;
+    }
+
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.wallet_list, parent, false);
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        HelperClass wallet = dataList.get(position);
+        holder.walletName.setText(wallet.getWalletName());
+        holder.walletBalance.setText(String.valueOf(wallet.getWalletBalance()));
+        holder.walletCategory.setText(String.valueOf(wallet.getWalletCategory()));
+
+        // Set the budgetCategoryIcon and budgetIconBg based on the category name
+        String categoryName = wallet.getWalletCategory();
+        int categoryImageRes = getCategoryImageResource(categoryName);
+        int categoryBgColor = getCategoryBackgroundColor(categoryName);
+
+        // Load category image using Glide into budgetCategoryIcon ImageView
+        Glide.with(context).load(categoryImageRes).into(holder.budgetCategoryIcon);
+
+        // Set background color for budgetIconBg ImageView
+        holder.budgetIconBg.setBackgroundColor(categoryBgColor);
+
+        holder.walletCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onWalletClickListener != null) {
+                    onWalletClickListener.onWalletClick(wallet , dialog);
+                }
+            }
+        });
+    }
+
+
+    @Override
+    public int getItemCount() {
+        return dataList.size();
+    }
+
+    public void updateData(List<HelperClass> newDataList) {
+        this.dataList = newDataList;
+        notifyDataSetChanged();
+    }
+
+    private int getCategoryImageResource(String categoryName) {
+        switch (categoryName) {
+            case "Food And Drinks":
+                return R.drawable.img_food;
+            case "Shopping":
+                return R.drawable.img_shoppingbag;
+            case "Transport":
+                return R.drawable.img_car;
+            case "Travel":
+                return R.drawable.img_travel;
+            case "Bills And Fees":
+                return R.drawable.img_bills;
+            case "Education":
+                return R.drawable.img_education;
+            case "Healthcare":
+                return R.drawable.img_health;
+            case "Hobbies":
+                return R.drawable.img_sports;
+            default:
+                return R.drawable.img_question;
+        }
+    }
+
+    private int getCategoryBackgroundColor(String categoryName) {
+        Resources res = context.getResources();
+        switch (categoryName) {
+            case "Food And Drinks":
+                return res.getColor(R.color.LightBlueColor);
+            case "Shopping":
+                return res.getColor(R.color.Orangecolor);
+            case "Transport":
+                return res.getColor(R.color.Purplecolor);
+            case "Travel":
+                return res.getColor(R.color.Greencolor);
+            case "Bills And Fees":
+                return res.getColor(R.color.Orangecolor);
+            case "Education":
+                return res.getColor(R.color.Greencolor);
+            case "Healthcare":
+                return res.getColor(R.color.LightBlueColor);
+            case "Hobbies":
+                return res.getColor(R.color.Purplecolor);
+            default:
+                // Return a default color for unknown categories
+                return res.getColor(R.color.Greencolor);
+        }
+    }
+
+}
+
+    class WalletViewHolder extends RecyclerView.ViewHolder {
+        TextView walletName, walletBalance,walletCategory;
+        CardView walletCard;
+        ImageView budgetCategoryIcon, budgetIconBg;
+
+        public WalletViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            walletCard = itemView.findViewById(R.id.walletCard);
+            walletName = itemView.findViewById(R.id.walletName);
+            walletBalance = itemView.findViewById(R.id.walletBalance);
+            budgetCategoryIcon = itemView.findViewById(R.id.budgetCategoryIcon);
+            budgetIconBg = itemView.findViewById(R.id.budgetIconBg);
+            walletCategory = itemView.findViewById(R.id.walletCategory);
+
+            // Convert dp to pixels using TypedValue
+            int iconSizeInPixels = (int) TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP, 30, itemView.getResources().getDisplayMetrics()
+            );
+
+            // Set the desired size for the budgetCategoryIcon ImageView
+            ViewGroup.LayoutParams layoutParams = budgetCategoryIcon.getLayoutParams();
+            layoutParams.width = iconSizeInPixels;
+            layoutParams.height = iconSizeInPixels;
+            budgetCategoryIcon.setLayoutParams(layoutParams);
+
+            // Convert dp to pixels using TypedValue for budgetIconBg
+            int bgSizeInPixels = (int) TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP, 40, itemView.getResources().getDisplayMetrics()
+            );
+
+            // Set the desired size for the budgetIconBg ImageView
+            ViewGroup.LayoutParams bgLayoutParams = budgetIconBg.getLayoutParams();
+            bgLayoutParams.width = bgSizeInPixels;
+            bgLayoutParams.height = bgSizeInPixels;
+            budgetIconBg.setLayoutParams(bgLayoutParams);
+        }
+
+
+    }
+
+
+
+
+

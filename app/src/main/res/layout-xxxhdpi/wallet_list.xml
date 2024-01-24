@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/walletCard"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="5dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/budgetIconBg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/Yellowcolor"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/budgetCategoryIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imgfood"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            android:text="Wallet Name"
+            android:fontFamily="@font/poppins"
+            android:id="@+id/walletName"
+            android:textSize="16sp"
+            android:layout_toEndOf="@id/budgetCategoryIcon"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/walletCategory"
+            android:layout_width="120dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@id/budgetCategoryIcon"
+            android:fontFamily="@font/poppins"
+            android:text="Category"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/WalletRM"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="95dp"
+            android:fontFamily="@font/poppins"
+            android:layout_alignParentEnd="true"
+            android:text="RM"
+            android:textColor="@color/Greencolor"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/walletBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/WalletRM"
+            android:layout_marginStart="-90dp"
+            android:fontFamily="@font/poppins"
+            android:text="Price"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/Greencolor"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

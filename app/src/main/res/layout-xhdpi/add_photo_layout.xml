@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dialogbox"
+    >
+
+    <TextView
+        android:id="@+id/tvTakePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:drawableStart="@drawable/img_camera"
+        android:drawableEnd="@drawable/img_arrow_right"
+        android:drawablePadding="12sp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="Take Photo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/tvChooseFromLibrary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:drawableStart="@drawable/img_photo"
+        android:drawableEnd="@drawable/img_arrow_right"
+        android:drawablePadding="12sp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="Choose From Library"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTakePhoto"></TextView>
+
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="289dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_input"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="Cancel"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChooseFromLibrary" />
+
+    <ImageView
+        android:id="@+id/imgLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_line" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

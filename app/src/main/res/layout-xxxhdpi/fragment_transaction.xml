@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgSearchIcon"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="-5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/custom_bg_transaction_orange" />
+
+    <TextView
+        android:id="@+id/imgBg"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="2dp"
+        android:foreground="@drawable/custom_bg_transaction_green"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgSearchIcon" />
+
+    <TextView
+        android:id="@+id/tvAddTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins_extrabold"
+        android:text="Add Transactions"
+        android:textColor="@color/white"
+        android:textIsSelectable="false"
+        android:textSize="25sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="Add A Transaction : "
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imgBg"
+        app:layout_constraintTop_toTopOf="@+id/imgBg" />
+
+    <TextView
+        android:id="@+id/tvSelectCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="Selected Category"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgBg" />
+
+    <TextView
+        android:id="@+id/tvSelectDate"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/img_date"
+        android:drawableEnd="@drawable/img_arrow_right"
+        android:drawableTint="#3083CC"
+        android:fontFamily="@font/poppins"
+        android:gravity="center|center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="Select Date"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etWriteNote" />
+
+    <EditText
+        android:id="@+id/etWriteNote"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/img_note"
+        android:drawablePadding="29dp"
+        android:drawableTint="#512CD5"
+        android:fontFamily="@font/poppins"
+        android:gravity="left|center"
+        android:hint="Write transaction name"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectWallet" />
+
+    <TextView
+        android:id="@+id/tvAddPhoto"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/img_photo"
+        android:drawableEnd="@drawable/img_arrow_right"
+        android:drawableTint="#DA3E3E"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="Add Photo *"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectDate" />
+
+    <TextView
+        android:id="@+id/tvSelectWallet"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/img_wallet"
+        android:drawableEnd="@drawable/img_arrow_right"
+        android:drawableTint="#009688"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="Select Budget To Deduct "
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBg" />
+
+    <Button
+        android:id="@+id/btnAddTransaction"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/Greencolor"
+        android:fontFamily="@font/poppins"
+        android:text="Add Transaction"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPhoto" />
+
+    <EditText
+        android:id="@+id/etRM"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#0000BF63"
+        android:editable="false"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="0.00"
+        android:inputType="number|numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgBg" />
+
+    <ImageView
+        android:id="@+id/imgCategory"
+        android:layout_width="43dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgBg"
+        app:layout_constraintTop_toBottomOf="@+id/imgSearchIcon"
+        app:srcCompat="@drawable/custom_profile_bg" />
+
+    <ImageView
+        android:id="@+id/imgPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddPhoto"
+        app:srcCompat="@drawable/custom_input" />
+
+
+    <!-- Main Buttons -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

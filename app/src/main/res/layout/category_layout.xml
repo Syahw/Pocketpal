@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogbox"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".transactionFragment">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="80dp"
+            android:fontFamily="@font/poppins"
+            android:text="Shopping"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnShopping" />
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_extrabold"
+            android:text="Choose a category :"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnSports"
+            android:layout_width="54dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#DADADA"
+            app:icon="@drawable/img_sports"
+            app:iconGravity="top"
+            app:iconSize="35dp"
+            app:iconTint="@color/Purplecolor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnTravel" />
+
+        <Button
+            android:id="@+id/btnHealthcare"
+            android:layout_width="54dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#DADADA"
+            app:icon="@drawable/img_health"
+            app:iconGravity="top"
+            app:iconSize="35dp"
+            app:iconTint="@color/LightBlueColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnTransport" />
+
+        <Button
+            android:id="@+id/btnEducation"
+            android:layout_width="54dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="80dp"
+            android:backgroundTint="#DADADA"
+            app:icon="@drawable/img_education"
+            app:iconGravity="top"
+            app:iconSize="32dp"
+            app:iconTint="@color/Greencolor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnShopping" />
+
+        <Button
+            android:id="@+id/btnBills"
+            android:layout_width="54dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="260dp"
+            android:backgroundTint="#DADADA"
+            app:icon="@drawable/img_bills"
+            app:iconGravity="top"
+            app:iconSize="32dp"
+            app:iconTint="@color/Orangecolor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnFood" />
+
+        <Button
+            android:id="@+id/btnTravel"
+            android:layout_width="54dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#DADADA"
+            app:icon="@drawable/img_travel"
+            app:iconGravity="top"
+            app:iconSize="32dp"
+            app:iconTint="@color/Greencolor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
+
+        <Button
+            android:id="@+id/btnTransport"
+            android:layout_width="54dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#DADADA"
+            app:icon="@drawable/img_car"
+            app:iconGravity="top"
+            app:iconSize="32dp"
+            app:iconTint="@color/Purplecolor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
+
+        <Button
+            android:id="@+id/btnShopping"
+            android:layout_width="54dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="80dp"
+            android:backgroundTint="#DADADA"
+            app:icon="@drawable/img_shoppingbag"
+            app:iconGravity="top"
+            app:iconSize="32dp"
+            app:iconTint="@color/Orangecolor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
+
+        <Button
+            android:id="@+id/btnFood"
+            android:layout_width="54dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="260dp"
+            android:backgroundTint="#DADADA"
+            app:icon="@drawable/img_food"
+            app:iconGravity="top"
+            app:iconSize="32dp"
+            app:iconTint="@color/LightBlueColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
+
+    <ImageView
+        android:id="@+id/imgBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_line" />
+
+        <TextView
+            android:id="@+id/tvFoodandDrinks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="260dp"
+            android:fontFamily="@font/poppins"
+            android:text="Food and Drinks"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnFood" />
+
+        <TextView
+            android:id="@+id/tvTransport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins"
+            android:text="Transport"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnTransport" />
+
+        <TextView
+            android:id="@+id/tvTravel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins"
+            android:text="Travel"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnTravel" />
+
+        <TextView
+            android:id="@+id/tvFees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="260dp"
+            android:fontFamily="@font/poppins"
+            android:text="Fees and Bills"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnBills" />
+
+        <TextView
+            android:id="@+id/tvEducation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="80dp"
+            android:fontFamily="@font/poppins"
+            android:text="Education"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnEducation" />
+
+        <TextView
+            android:id="@+id/tvHealthcare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/poppins"
+            android:text="Healthcare"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnHealthcare" />
+
+        <TextView
+            android:id="@+id/tvSports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/poppins"
+            android:text="Hobbies"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSports" />
+
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_close" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

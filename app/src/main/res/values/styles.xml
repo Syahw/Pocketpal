@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="custom_date_picker" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="colorAccent">@color/Greencolor</item>
+        <item name="android:windowBackground">@drawable/soft_border</item>
+    </style>
+
+</resources>

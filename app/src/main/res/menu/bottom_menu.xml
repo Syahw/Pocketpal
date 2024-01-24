@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+         android:id="@+id/homeFragment"
+        android:icon="@drawable/outline_home_24"/>
+
+    <item android:title="Budgets"
+        android:id="@+id/budgetFragment"
+        android:icon="@drawable/outline_account_balance_wallet_24"/>
+
+    <item android:title="ADD"
+        android:id="@+id/transactionFragment"
+        android:icon="@drawable/baseline_add_circle_24"/>
+
+    <item android:title="History"
+        android:id="@+id/spendsFragment"
+        android:icon="@drawable/outline_budget"/>
+
+    <item android:title="More"
+        android:id="@+id/moreFragment"
+        android:icon="@drawable/baseline_more_horiz_24"/>
+</menu>

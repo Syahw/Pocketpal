@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="Greencolor">#00BF63</color>
+    <color name="Yellowcolor">#FFD6B438</color>
+    <color name="LightBlueColor">#FF29B9CC</color>
+    <color name="Orangecolor">#F1912F</color>
+    <color name="Purplecolor">#FFB220BC</color>
+    <color name="darker_gray">#878787</color>
+    <color name="button_active_color">#00BF63</color> <!-- Green color for active state -->
+    <color name="button_inactive_color">#CCCCCC</color> <!-- Inactive color -->
+    <color name="Redcolor">#bd3345</color>
+    <color name="gray">#D9D9D9</color>
+    <color name="light_gray">#FFFAFAFA</color>
+    <color name="semi_transparent">#AARRGGBB</color>
+
+
+    <!-- GRAPH COLOURS -->
+    <color name="LightRed">#C0392B</color>
+    <color name="Purple">#9B59B6</color>
+    <color name="LightBlue">#5DADE2</color>
+    <color name="DarkBlue">#2471A3 </color>
+    <color name="LightGreen">#27AE60 </color>
+    <color name="Yellow">#F1C40F </color>
+    <color name="Orange">#E67E22</color>
+    <color name="LightPurple">#BB8FCE</color>
+</resources>
